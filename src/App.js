@@ -1,7 +1,7 @@
 /* import { useState } from 'react'; */
 import Lists from './Lists';
 import './App.css';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, HashRouter } from 'react-router-dom';
 import UseEffect from './UseEffect';
 import UseRef from './UseRef'
 import UseRefTimer from './UseRefTimer';
@@ -14,7 +14,7 @@ import UseCallback from './UseCallback/UseCallback';
 const App = () => {
  
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className='app-wrapper'>
         <Lists />
         <Route path = {'/UseEffect'} render={()=> <UseEffect />}></Route>
@@ -24,7 +24,7 @@ const App = () => {
         <Route path = {'/UseCallback'} render={()=> <UseCallback />}></Route>
         <Route path = {'/UseCallbackCount'} render={()=> <UseCallbackCount />}></Route>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
