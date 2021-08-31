@@ -1,0 +1,35 @@
+.theme {
+    margin: 0;
+    background-color: #282c34;
+    color: #fff;
+    margin: 10px auto;
+    padding: 20px;
+  }
+ h5{
+     text-align: left;
+    margin-left: 10px;
+ }
+  .counter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .counter h3 {
+    margin-left: 10px;
+  }
+
+  .cyan {
+    color: #61dafb;
+  }
+
+  .theme button {
+    border: 1px solid #383c45;
+    background-color: #282c34;
+    color: #fff;
+    font-size: 18px;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 6px;
+    min-width: 50px;
+    margin-right: 5px;
+  }

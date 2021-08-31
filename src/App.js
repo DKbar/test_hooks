@@ -1,25 +1,35 @@
-import logo from './logo.svg';
+/* import { useState } from 'react'; */
+import Lists from './Lists';
 import './App.css';
+import { BrowserRouter, Route } from 'react-router-dom';
+import UseEffect from './UseEffect';
+import UseRef from './UseRef'
+import UseRefTimer from './UseRefTimer';
+import UseMemo from './UseMemo/UseMemo';
+import UseCallbackCount from './UseCallbackCount/UseCallbackCount';
+import UseCallback from './UseCallback/UseCallback';
 
-function App() {
+
+
+const App = () => {
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <div className='app-wrapper'>
+        <Lists />
+        <Route path = {'/UseEffect'} render={()=> <UseEffect />}></Route>
+        <Route path = {'/UseRef'} render={()=> <UseRef />}></Route>
+        <Route path = {'/UseRefTimer'} render={()=> <UseRefTimer />}></Route>
+        <Route path = {'/UseMemo'} render={()=> <UseMemo />}></Route>
+        <Route path = {'/UseCallback'} render={()=> <UseCallback />}></Route>
+        <Route path = {'/UseCallbackCount'} render={()=> <UseCallbackCount />}></Route>
+      </div>
+    </BrowserRouter>
+  )
 }
 
 export default App;
+
+/* const [visibleList, setVisibleList] = useState(true)
+       {visibleList && <List />}
+        <button onClick={() => setVisibleList(visible => !visible)}>Visible/Unvisible</button> */
